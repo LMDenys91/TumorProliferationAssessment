@@ -4,9 +4,9 @@ FROM ermaker/keras
 # kernel crashes.
 ENV TINI_VERSION v0.6.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
-ADD jupyter/jupyter_notebook_config.py /.jupyter/jupyter_notebook_config.py
-ADD jupyter/notebook.key /.jupyter/notebook.key
-ADD jupyter/notebook.pem /.jupyter/notebook.pem
+ADD .jupyter/jupyter_notebook_config.py /.jupyter/jupyter_notebook_config.py
+ADD .jupyter/notebook.key /.jupyter/notebook.key
+ADD .jupyter/notebook.pem /.jupyter/notebook.pem
 RUN chmod +x /usr/bin/tini
 ENTRYPOINT ["/usr/bin/tini", "--"]
 
