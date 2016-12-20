@@ -57,8 +57,8 @@ RUN easy_install ml_metrics
 ADD https://raw.githubusercontent.com/aurora/rmate/master/rmate /usr/bin/rmate
 RUN sudo chmod +x /usr/bin/rmate
 
-# VOLUME /home/lucas/deeplearning
-# WORKDIR /home/lucas/deeplearning
+# VOLUME /deeplearning
+# WORKDIR /deeplearning
 
 EXPOSE 8888
 CMD ["jupyter", "notebook", "--port=8888", "--config=/.jupyter/jupyter_notebook_config.py"]

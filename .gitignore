@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Notebook config
+.jupyter/*
+
 # Distribution / packaging
 .Python
 env/
